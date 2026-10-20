@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mustafa Frozen Foods</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff7f7;
+  color: #292929;
+}
+header {
+  background: #c8102e;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+header h1 { margin: 0 0 10px; }
+header p { margin: 0; }
+main { max-width: 1050px; margin: auto; padding: 20px; }
+h2 { text-align: center; color: #c8102e; }
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+.card {
+  background: white;
+  border: 1px solid #f0d5d9;
+  border-radius: 14px;
+  padding: 22px 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px #0000000d;
+}
+.food { font-size: 48px; }
+.card h3 { min-height: 42px; }
+.price { color: #c8102e; font-size: 22px; font-weight: bold; }
+button, .whatsapp {
+  background: #c8102e;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+.whatsapp { background: #168b50; font-weight: bold; }
+.card button { width: 100%; }
+.contact { text-align: center; padding: 25px 10px; }
+footer {
+  background: #c8102e;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  margin-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mustafa Frozen Foods</h1>
+  <p>Delicious Frozen Snacks for Your Family</p>
+</header>
+
+<main>
+  <h2>Our Products</h2>
+  <div class="products">
+
+    <div class="card">
+      <div class="food">🍗</div>
+      <h3>Chicken Shami Kabab</h3>
+      <p>12 Pieces</p>
+      <p class="price">Rs. 500</p>
+      <button onclick="order('Chicken Shami Kabab',12,500)">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🍗</div>
+      <h3>Chicken Nuggets</h3>
+      <p>20 Pieces</p>
+      <p class="price">Rs. 500</p>
+      <button onclick="order('Chicken Nuggets',20,500)">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🥮</div>
+      <h3>Meethi Tikki</h3>
+      <p>12 Pieces</p>
+      <p class="price">Rs. 200</p>
+      <button onclick="order('Meethi Tikki',12,200)">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🥟</div>
+      <h3>Aloo Samosa</h3>
+      <p>10 Pieces</p>
+      <p class="price">Rs. 100</p>
+      <button onclick="order('Aloo Samosa',10,100)">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🌯</div>
+      <h3>Chicken Veg Roll</h3>
+      <p>10 Pieces</p>
+      <p class="price">Rs. 300</p>
+      <button onclick="order('Chicken Veg Roll',10,300)">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <div class="food">🥟</div>
+      <h3>Chicken Veg Samosa</h3>
+      <p>10 Pieces</p>
+      <p class="price">Rs. 200</p>
+      <button onclick="order('Chicken Veg Samosa',10,200)">Order on WhatsApp</button>
+    </div>
+
+  </div>
+
+  <div class="contact">
+    <h2>Order Fresh Frozen Snacks</h2>
+    <p>WhatsApp: 03103959194</p>
+    <a class="whatsapp"
+       href="https://wa.me/923103959194"
+       target="_blank" rel="noopener">
+       Chat with Us on WhatsApp
+    </a>
+  </div>
+</main>
+
+<footer>
+  Mustafa Frozen Foods | Thank You for Visiting!
+</footer>
+
+<script>
+function order(product, pieces, price) {
+  const message = "Assalamualaikum! I want to order:\\n" +
+    "Product: " + product + "\\n" +
+    "Quantity: " + pieces + " pieces\\n" +
+    "Price: Rs. " + price +
+    "\\nPlease confirm availability and delivery.";
+  window.open(
+    "https://wa.me/923103959194?text=" +
+    encodeURIComponent(message),
+    "_blank"
+  );
+}
+</script>
+
+</body>
+</html>
